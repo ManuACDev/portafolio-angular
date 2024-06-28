@@ -1,1 +1,11 @@
-<p>proyectos works!</p>
+<!-- Componente de Proyectos -->
+<div class="proyectos">
+  <h2>Proyectos</h2>
+  <div class="proyecto" *ngFor="let proyecto of listaProyectos">
+    <h3>{{ proyecto.nombre }}</h3>
+    <p>{{ proyecto.descripcion }}</p>
+    <a href="{{ proyecto.enlaceCodigo }}" class="btn-codigo">Código</a>
+    <a href="{{ proyecto.enlaceDemo }}" class="btn-demo">Demo</a>
+  </div>
+</div>
+
