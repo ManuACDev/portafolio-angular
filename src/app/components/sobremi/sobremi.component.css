@@ -1,0 +1,101 @@
+/* Estilos para la sección principal de "Sobre Mí" */
+.sobre-mi {
+  background-color: #f5f5f5;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.sobre-mi .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobre-mi .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.sobre-mi h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.sobre-mi h2 {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.sobre-mi .highlight {
+  color: #007bff;
+}
+
+.sobre-mi p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.sobre-mi .btn-disponible {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.sobre-mi .btn-disponible:hover {
+  background-color: #218838;
+}
+
+.sobre-mi .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sobre-mi .btn-social {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sobre-mi .btn-social i {
+  margin-right: 0.5rem;
+}
+
+.sobre-mi .btn-social:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Nueva sección "Sobre Mí" detalle */
+.sobre-mi-detalle {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.sobre-mi-detalle .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sobre-mi-detalle h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sobre-mi-detalle p {
+  font-size: 1.2em;
+  color: #333;
+}
