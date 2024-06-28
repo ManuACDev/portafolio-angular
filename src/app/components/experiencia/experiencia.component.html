@@ -1,1 +1,14 @@
-<p>experiencia works!</p>
+<!-- experiencia-laboral.component.html -->
+<div class="experiencia-laboral">
+  <h2>Experiencia Laboral</h2>
+  <div *ngFor="let trabajo of experiencias">
+    <h3>{{ trabajo.puesto }}</h3>
+    <p>{{ trabajo.empresa }} - {{ trabajo.fecha }}</p>
+    <ul>
+      <li *ngFor="let tarea of trabajo.tareas">
+        {{ tarea }}
+      </li>
+    </ul>
+  </div>
+</div>
+

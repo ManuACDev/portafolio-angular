@@ -1,0 +1,42 @@
+/* Estilo para la sección de experiencia laboral */
+.experiencia-laboral {
+  background-color: #ffffff; /* Color de fondo */
+  max-width: 800px; /* Ancho máximo */
+  margin: 20px auto; /* Margen automático para centrar */
+  padding: 20px; /* Relleno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el título de la sección */
+.experiencia-laboral h2 {
+  color: #333; /* Color del texto */
+  border-bottom: 2px solid #eaeaea; /* Línea debajo del título */
+  padding-bottom: 10px; /* Relleno inferior */
+}
+
+/* Estilo para los títulos de cada trabajo */
+.experiencia-laboral h3 {
+  color: #0077cc; /* Color del texto */
+  margin-top: 15px; /* Margen superior */
+}
+
+/* Estilo para la información de cada trabajo */
+.experiencia-laboral p {
+  color: #666; /* Color del texto */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilo para la lista de tareas */
+.experiencia-laboral ul {
+  list-style: none; /* Sin viñetas */
+  padding-left: 0; /* Sin relleno izquierdo */
+}
+
+/* Estilo para cada tarea */
+.experiencia-laboral li {
+  background-color: #f9f9f9; /* Color de fondo */
+  margin-bottom: 5px; /* Margen inferior */
+  padding: 10px; /* Relleno */
+  border-left: 3px solid #0077cc; /* Borde izquierdo */
+}
