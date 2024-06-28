@@ -1,0 +1,49 @@
+/* Estilo del header */
+header {
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  color: #333;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 1); /* Fondo sólido cuando se hace scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la navegación */
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilo de los enlaces */
+header nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+/* Estilo del ícono de tema */
+header nav .theme-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hover en los enlaces */
+header nav a:hover {
+  color: #007bff; /* Cambia a tu color de resaltado preferido */
+}
+
+/* Enlace activo */
+header nav a.active {
+  color: #007bff; /* Cambia a tu color de resaltado preferido */
+  border-bottom: 2px solid #007bff; /* Línea inferior */
+}
