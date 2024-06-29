@@ -1,18 +1,45 @@
-/* habilidades.component.css */
-.habilidades-container {
+.habilidades {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.habilidades .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.habilidades h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-.habilidad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.habilidades h2 i {
+  margin-right: 10px;
 }
-.habilidad img {
-  width: 50px; /* Ajusta al tamaño deseado */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.skill {
+  text-align: center;
+  flex: 1 0 21%; /* Adjust this value to control the number of items per row */
+}
+
+.skill img {
+  max-width: 100px;
   height: auto;
+  margin-bottom: 10px;
 }
-.habilidad p {
-  margin-top: 5px;
+
+.skill p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
 }
