@@ -128,7 +128,8 @@
   }
 
   .sobre-mi-detalle-imagen {
+    order: -1; /* Coloca la imagen antes del texto en el flujo de la columna */
     margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
-    margin-top: 20px; /* Añade espacio arriba de la imagen en dispositivos móviles */
+    margin-bottom: 20px; /* Añade espacio inferior para separar del texto */
   }
 }
