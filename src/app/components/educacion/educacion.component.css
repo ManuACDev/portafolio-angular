@@ -1,0 +1,64 @@
+.educacion {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.educacion .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.educacion h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: #007bff;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px 0;
+  padding-left: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #007bff;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  color: #666;
+}
