@@ -1,56 +1,77 @@
-/* Estilo para el componente de proyectos */
 .proyectos {
-  background-color: #f7f7f7; /* Color de fondo */
-  padding: 20px; /* Relleno */
+  padding: 50px 0;
+  background-color: #f5f5f5;
 }
 
-/* Estilo para el título de la sección */
+.proyectos .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .proyectos h2 {
-  color: #333; /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  margin-bottom: 30px; /* Margen inferior */
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-/* Estilo para cada proyecto */
-.proyecto {
-  background-color: #fff; /* Color de fondo */
-  border: 1px solid #ddd; /* Borde */
-  padding: 15px; /* Relleno */
-  margin-bottom: 20px; /* Margen inferior */
-  border-radius: 4px; /* Bordes redondeados */
+.project {
+  display: flex;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para el nombre del proyecto */
-.proyecto h3 {
-  color: #007bff; /* Color del texto */
-  margin-bottom: 10px; /* Margen inferior */
+.project img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
 }
 
-/* Estilo para la descripción del proyecto */
-.proyecto p {
-  color: #666; /* Color del texto */
-  font-size: 14px; /* Tamaño de fuente */
+.project-info {
+  flex: 1;
 }
 
-/* Botones para código y demo */
-.btn-codigo, .btn-demo {
-  text-decoration: none; /* Sin decoración de texto */
-  padding: 10px 15px; /* Relleno */
-  color: #fff; /* Color del texto */
-  border-radius: 4px; /* Bordes redondeados */
-  display: inline-block; /* Tipo de display */
-  margin-right: 10px; /* Margen derecho */
+.project-info h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
 }
 
-.btn-codigo {
-  background-color: #28a745; /* Color de fondo */
+.project-info p {
+  margin: 10px 0;
+  color: #666;
 }
 
-.btn-demo {
-  background-color: #007bff; /* Color de fondo */
+.project-links {
+  margin-top: 10px;
 }
 
-/* Efecto al pasar el mouse sobre los botones */
-.btn-codigo:hover, .btn-demo:hover {
-  opacity: 0.8; /* Opacidad */
+.project-links .btn {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.project-links .btn-codigo {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.project-links .btn-demo {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.project-links .btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.project-links .btn-demo:hover {
+  background-color: #28a745;
+  color: #fff;
 }

@@ -1,13 +1,27 @@
-<!-- Componente de Proyectos -->
- <section id="proyectos">
-  <div class="proyectos">
-    <h2>Proyectos</h2>
-    <div class="proyecto" *ngFor="let proyecto of listaProyectos">
-      <h3>{{ proyecto.nombre }}</h3>
-      <p>{{ proyecto.descripcion }}</p>
-      <a href="{{ proyecto.enlaceCodigo }}" class="btn-codigo">Código</a>
-      <a href="{{ proyecto.enlaceDemo }}" class="btn-demo">Demo</a>
+<section id="proyectos" class="proyectos">
+  <div class="container">
+    <h2><i class="fas fa-code"></i> Proyectos</h2>
+    <div class="project">
+      <img src="../../../assets/newsletter-signup.png" alt="Newsletter Sign Up Form">
+      <div class="project-info">
+        <h3>Newsletter Sign Up Form</h3>
+        <p>En este proyecto construyo un formulario de registro a un newsletter, acompañado de un mensaje de agradecimiento.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-codigo"><i class="fab fa-github"></i> Código</a>
+          <a href="#" class="btn btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <img src="../../../assets/shopping-cart.png" alt="Shopping Cart">
+      <div class="project-info">
+        <h3>Shopping Cart</h3>
+        <p>Shopping Cart tiene la funcionalidad básica de un carrito de compras. Añade ítems, elimínalos, cambia las tallas e incluso prueba algunos cupones de descuento.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-codigo"><i class="fab fa-github"></i> Código</a>
+          <a href="#" class="btn btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
