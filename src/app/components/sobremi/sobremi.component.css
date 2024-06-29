@@ -1,4 +1,11 @@
-/* Estilos para la sección principal de "Sobre Mí" */
+/* Estilo para la imagen a la derecha */
+.sobre-mi-detalle .imagen-derecha {
+  float: right; /* Para alinear la imagen a la derecha */
+  width: 300px; /* Ajusta el ancho de la imagen según sea necesario */
+  margin-left: 20px; /* Ajusta el margen izquierdo para separar del texto */
+}
+
+/* Estilo para la sección principal de "Sobre Mí" */
 .sobre-mi {
   background-color: #f5f5f5;
   padding: 5rem 0;
@@ -78,7 +85,7 @@
   color: white;
 }
 
-/* Nueva sección "Sobre Mí" detalle */
+/* Estilo para la sección "Sobre Mí" detalle */
 .sobre-mi-detalle {
   background-color: #f5f5f5;
   padding: 50px 0;
@@ -90,6 +97,10 @@
   text-align: left;
 }
 
+.sobre-mi-detalle-content {
+  margin-top: 40px;
+}
+
 .sobre-mi-detalle h2 {
   font-size: 2em;
   margin-bottom: 20px;
@@ -98,4 +109,21 @@
 .sobre-mi-detalle p {
   font-size: 1.2em;
   color: #333;
+}
+
+/* Estilo para la imagen a la derecha */
+.sobre-mi-detalle .imagen-derecha {
+  max-width: 100%; /* Ajustar el ancho máximo de la imagen */
+  display: block; /* Para asegurar que no se mezcle con otros elementos */
+  margin-top: 20px; /* Espacio superior para separar del texto */
+}
+
+/* Ajustes para la sección "Sobre Mí" detalle */
+.sobre-mi-detalle-content {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos internos sigan en columna */
+}
+
+.sobre-mi-detalle-texto {
+  margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
 }
