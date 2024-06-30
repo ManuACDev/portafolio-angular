@@ -9,6 +9,10 @@
 }
 
 .sobre-mi .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -30,20 +34,23 @@
   margin: 12px 0px 0px;
 }
 
-.sobre-mi h2 {
+.sobre-mi p {
+  width: 75%;
+  color: #34240A;
   font-size: 1.5rem;
-  color: #6c757d;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Figtree', sans-serif;
+  line-height: 2rem;  
+  margin-bottom: 2rem;
+  font-weight: 450;
 }
 
 .sobre-mi .highlight {
-  color: #007bff;
+  color: #0C8599;
 }
 
-.sobre-mi p {
-  font-size: 1.2rem;
-  color: #6c757d;
-  margin-bottom: 2rem;
+.sobre-mi .localizacion {
+  color: #099268;
 }
 
 .sobre-mi .social-links {
