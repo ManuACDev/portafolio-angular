@@ -12,19 +12,28 @@ header {
 header nav {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  color: #31373d;
+  font-size: 1rem;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  gap: 1rem;
+}
+
+/* Estilo elementos de la navegación */
+header nav * {
+  margin: 0;
+  padding: 1rem;
 }
 
 /* Estilo de los enlaces */
 header nav a {
-  color: #333;
+  color: #31373d;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s;
-  font-size: 1rem;
+  transition: color 0.4s;
 }
 
 /* Hover en los enlaces */
 header nav a:hover {
-  color: #007bff; /* Cambia a tu color de resaltado preferido */
+  color: #0C8599; /* Cambia a tu color de resaltado preferido */
 }
