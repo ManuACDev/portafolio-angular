@@ -21,8 +21,13 @@
 }
 
 .sobre-mi h1 {
-  font-size: 2.5rem;
-  margin: 1rem 0;
+  color: #212529;
+  font-size: 3.75rem;
+  font-weight: 700;
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1;
+  margin-top: 0.75rem;
+  margin: 12px 0px 0px;
 }
 
 .sobre-mi h2 {
