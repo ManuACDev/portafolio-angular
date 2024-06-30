@@ -10,20 +10,17 @@ import { Component } from '@angular/core';
 export class SobremiComponent {
 
   copyToClipboard(email: string) {
-    const el = document.createElement('textarea');
-    el.value = email;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  
-    const confirmation = document.getElementById('copy-confirmation');
-    if (confirmation) {
-      confirmation.style.display = 'inline';
-      setTimeout(() => {
-        confirmation.style.display = 'none';
-      }, 2000);
-    }
+    navigator.clipboard.writeText(email).then(() => {
+      const confirmation = document.getElementById('copy-confirmation');
+      if (confirmation) {
+        confirmation.style.display = 'inline';
+        setTimeout(() => {
+          confirmation.style.display = 'none';
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Error al intentar copiar al portapapeles: ', err);
+    });
   }
 
 }
