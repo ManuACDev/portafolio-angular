@@ -204,19 +204,26 @@
 }
 
 .sobre-mi-detalle h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  color: #212529;
+  font-size: 2.75rem;
+  font-weight: 600;
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1;  
 }
 
 .sobre-mi-detalle p {
   font-size: 1.2em;
+  font-family: 'Figtree', sans-serif;
   color: #333;
+  padding-right: 20px;
   margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
 }
 
 /* Estilo para la imagen a la derecha */
 .sobre-mi-detalle .imagen-derecha {
-  width: 300px; /* Ajusta el ancho de la imagen según sea necesario */
+  width: 225px; /* Ajusta el ancho de la imagen según sea necesario */
+  border-radius: 20px; /* Añade bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25); /* Añade la sombra */
 }
 
 @media (max-width: 768px) {
