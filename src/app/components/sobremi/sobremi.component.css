@@ -86,8 +86,35 @@
 }
 
 .sobre-mi .correo-container {
+  position: relative;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.copy-confirmation {
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 72%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.copy-confirmation::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
 /* Estilo para el botón de correo */
