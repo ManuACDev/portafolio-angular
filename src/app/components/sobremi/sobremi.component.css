@@ -185,6 +185,7 @@
 .sobre-mi-detalle .container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .sobre-mi-detalle-content {
@@ -209,6 +210,10 @@
   font-weight: 600;
   font-family: 'Red Hat Display', sans-serif;
   line-height: 1;  
+}
+
+.sobre-mi-detalle h2 i {
+  margin-right: 10px;
 }
 
 .sobre-mi-detalle p {
