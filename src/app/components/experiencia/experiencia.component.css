@@ -10,10 +10,11 @@
 }
 
 .experiencia h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  color: #212529;
+  font-size: 2.75rem;
+  font-weight: 600;
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1;
 }
 
 .experiencia h2 i {
@@ -21,35 +22,91 @@
 }
 
 .job {
+  display: flex;
+  align-items: flex-start;
   margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 20px;
+}
+
+.job-details {
+  flex: 1;
 }
 
 .job h3 {
   font-size: 1.5em;
+  font-family: 'Figtree', sans-serif;
   margin-bottom: 5px;
+  color: #0C8599;
 }
 
 .job h4 {
   font-size: 1.2em;
+  font-family: 'Figtree', sans-serif;
   margin-bottom: 5px;
   color: #666;
 }
 
 .job span {
   font-size: 1em;
-  margin-bottom: 10px;
+  font-family: 'Roboto Mono', sans-serif;
+  margin-bottom: 15px;
   display: block;
-  color: #999;
+  color: #6d6d6d;
 }
 
 .job p {
   margin: 0;
+  font-size: 1em;
+  font-family: 'Figtree', sans-serif;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.job p strong {
+  font-weight: bold;
+  color: #099268;
 }
 
 .job ul {
-  list-style: disc inside;
+  list-style: none;
+  padding-left: 0;
 }
 
 .job ul li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-family: 'Figtree', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.job ul li i {
+  color: #099268;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .job {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-logo {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .job-details {
+    text-align: center;
+  }
 }
