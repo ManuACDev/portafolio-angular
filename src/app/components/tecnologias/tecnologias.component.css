@@ -10,10 +10,11 @@
 }
 
 .habilidades h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  color: #212529;
+  font-size: 2.75rem;
+  font-weight: 600;
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1;
 }
 
 .habilidades h2 i {
@@ -40,6 +41,8 @@
 
 .skill p {
   margin: 0;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-family: 'Figtree', sans-serif;
   color: #333;
+  margin-bottom: 10px;
 }
