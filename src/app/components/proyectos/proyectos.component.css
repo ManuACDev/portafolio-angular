@@ -6,54 +6,64 @@
 .proyectos .container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px; /* Espacio a los lados */
 }
 
 .proyectos h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  color: #212529;
+  font-size: 2.75rem;
+  font-weight: 600;
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1;  
 }
 
 .project {
   display: flex;
   margin-bottom: 30px;
-  background: #fff;
+  background: transparent;
   padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project > div {
+  margin-right: 20px; /* Espacio entre la imagen y el texto en pantallas grandes */
 }
 
 .project img {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
+  max-width: 350px; /* Imagen ocupará todo el ancho disponible */
+  max-height: auto; /* Altura máxima de la imagen */
+  border-radius: 0.75rem;
 }
 
 .project-info {
-  flex: 1;
+  flex: 1; /* Ocupa todo el espacio disponible */
 }
 
 .project-info h3 {
-  margin-top: 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-family: 'Figtree', sans-serif;
   color: #333;
+  margin-top: 5px;
 }
 
 .project-info p {
   margin: 10px 0;
+  font-size: 1em;
+  font-family: 'Figtree', sans-serif;
   color: #666;
+  line-height: 1.6;
 }
 
 .project-links {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .project-links .btn {
-  margin-right: 10px;
+  margin-right: 10px; /* Espacio entre los botones */
   padding: 10px 15px;
-  border: 1px solid #007bff;
+  border: 1px solid transparent;
   border-radius: 5px;
   text-decoration: none;
-  color: #007bff;
+  transition: all 0.3s ease;
 }
 
 .project-links .btn-codigo {
@@ -67,11 +77,26 @@
 }
 
 .project-links .btn:hover {
-  background-color: #007bff;
-  color: #fff;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.5);
+  color: #007bff;
 }
 
 .project-links .btn-demo:hover {
-  background-color: #28a745;
-  color: #fff;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.5);
+  color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+    align-items: center; /* Centra horizontalmente los elementos */
+  }
+
+  .project > div {
+    margin-right: 0; /* Elimina el margen entre la imagen y el texto en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto en pantallas pequeñas */
+    text-align: justify; /* Centra la imagen en pantallas pequeñas */
+  }
 }
