@@ -1,11 +1,14 @@
-/* Estilo del header */
+/* Estilo del header inicial */
 header {  
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-top: 0.5rem;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem 0; /* Espaciado superior e inferior para el header */
 }
 
 /* Estilo de la navegación */
@@ -18,12 +21,23 @@ header nav {
   font-family: 'Figtree', sans-serif;
   font-weight: 600;
   gap: 1rem;
+  background-color: transparent; /* Color inicial transparente */
+  padding: 0.5rem 1rem;
+  border-radius: 25px; /* Borde redondeado */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo del header cuando se hace scroll */
+header nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo al hacer scroll #fff6 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo elementos de la navegación */
 header nav * {
   margin: 0;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 /* Estilo de los enlaces */
