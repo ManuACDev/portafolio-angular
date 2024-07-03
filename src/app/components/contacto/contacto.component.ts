@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class ContactoComponent {
 
+  copyToClipboard(email: string) {
+    navigator.clipboard.writeText(email).then(() => {
+      const confirmation = document.getElementById('copy-confirmation-two');
+      if (confirmation) {
+        confirmation.style.display = 'inline';
+        setTimeout(() => {
+          confirmation.style.display = 'none';
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Error al intentar copiar al portapapeles: ', err);
+    });
+  }
+
 }
