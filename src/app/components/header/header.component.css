@@ -33,21 +33,140 @@ header nav.scrolled {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo elementos de la navegación */
-header nav * {
-  margin: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
+header nav.open .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
 }
 
-/* Estilo de los enlaces */
-header nav a {
+header nav.open .nav-links a {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Estilo del toggle del menú */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-icon, .menu-icon::before, .menu-icon::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #31373d;
+  transition: all 0.3s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
   color: #31373d;
   text-decoration: none;
   transition: color 0.4s;
 }
 
-/* Hover en los enlaces */
-header nav a:hover {
-  color: #0C8599; /* Cambia a tu color de resaltado preferido */
+.nav-links a:hover {
+  color: #0C8599;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  header nav.open .nav-links {
+    display: flex;
+  }
+
+  header nav.open .menu-icon {
+    background-color: transparent;
+  }
+
+  header nav.open .menu-icon::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  header nav.open .menu-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Personalización de los iconos del menú */
+.menu-icon {
+  background: none;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background-color: #31373d;
+  transition: all 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #31373d;
+  transition: all 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+.nav.open .menu-icon {
+  transform: rotate(45deg);
+}
+
+.nav.open .menu-icon::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.nav.open .menu-icon::after {
+  transform: rotate(90deg);
+  top: 0;
+  opacity: 0;
 }
