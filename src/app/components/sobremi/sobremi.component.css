@@ -4,7 +4,6 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #f5f5f5;
   padding: 5rem;  
 }
 
@@ -17,7 +16,7 @@
   margin: 0 auto;
 }
 
-.sobre-mi .avatar {
+.avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -45,47 +44,47 @@
   font-weight: 450;
 }
 
-.sobre-mi .highlight {
+.highlight {
   color: #0C8599;
 }
 
-.sobre-mi .localizacion {
+.localizacion {
   color: #099268;
 }
 
-.sobre-mi .social-links {
+.social-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-.sobre-mi .btn-social.linkedin {
+.btn-social.linkedin {
   background-color: #0077b5; /* Color característico de LinkedIn */
   border-color: #0077b5; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.sobre-mi .btn-social.linkedin:hover {
+.btn-social.linkedin:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #0077b5; /* Color característico para el texto e ícono */
   border-color: #0077b5;
 }
 
 /* Estilo para el botón de GitHub */
-.sobre-mi .btn-social.github {
+.btn-social.github {
   background-color: #333; /* Color característico de GitHub */
   border-color: #333; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.sobre-mi .btn-social.github:hover {
+.btn-social.github:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #333; /* Color característico para el texto e ícono */
   border-color: #333;
 }
 
-.sobre-mi .correo-container {
+.correo-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -118,19 +117,19 @@
 }
 
 /* Estilo para el botón de correo */
-.sobre-mi .btn-social.correo {
+.btn-social.correo {
   background-color: #ff4c4c; /* Color característico de correo */
   border-color: #ff4c4c; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.sobre-mi .btn-social.correo:hover {
+.btn-social.correo:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #ff4c4c; /* Color característico para el texto e ícono */
   border-color: #ff4c4c;
 }
 
-.sobre-mi .btn-social.copy-email {
+.btn-social.copy-email {
   background-color: #7d7d7d; /* Color característico para el botón de copiar correo */
   border-color: #7d7d7d;
   color: white;
@@ -140,19 +139,19 @@
 }
 
 /* Estilo para el botón de CV */
-.sobre-mi .btn-social.cv {
+.btn-social.cv {
   background-color: #9dfe6d; /* Color característico para el CV */
   border-color: #9dfe6d; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.sobre-mi .btn-social.cv:hover {
+.btn-social.cv:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #9dfe6d; /* Color característico para el texto e ícono */
   border-color: #9dfe6d;
 }
 
-.sobre-mi .btn-social {
+.btn-social {
   display: inline-block; /* Cambiado a inline-block para asegurar alineación */
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
@@ -163,22 +162,21 @@
   transition: color 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s; /* Añadida transición para background-color y border-color */
 }
 
-.sobre-mi .btn-social i {
+.btn-social i {
   margin-right: 0.5rem;
   transition: transform 0.3s;
 }
 
-.sobre-mi .btn-social:hover {
+.btn-social:hover {
   transform: translateY(-3px); /* Desplazamiento hacia arriba */
 }
 
-.sobre-mi .btn-social:hover i {
+.btn-social:hover i {
   transform: rotate(20deg); /* Rotación del ícono */
 }
 
 /* Estilo para la sección "Sobre Mí" detalle */
 .sobre-mi-detalle {
-  background-color: #f5f5f5;
   padding: 50px 0;
 }
 
@@ -188,18 +186,18 @@
   padding: 0 15px;
 }
 
-.sobre-mi-detalle-content {
+.detalle-content {
   display: flex;
   flex-direction: row; /* Alinea los elementos en fila */
   justify-content: space-between; /* Espacio entre elementos */
   align-items: flex-start; /* Alineación vertical al principio */
 }
 
-.sobre-mi-detalle-texto {
+.detalle-texto {
   flex: 1; /* Ocupa todo el espacio disponible */
 }
 
-.sobre-mi-detalle-imagen {
+.detalle-imagen {
   flex-shrink: 0; /* Evita que la imagen se encoge */
   margin-left: 20px; /* Margen izquierdo para separar del texto */
 }
@@ -225,19 +223,19 @@
 }
 
 /* Estilo para la imagen a la derecha */
-.sobre-mi-detalle .imagen-derecha {
+.imagen-derecha {
   width: 225px; /* Ajusta el ancho de la imagen según sea necesario */
   border-radius: 20px; /* Añade bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25); /* Añade la sombra */
 }
 
 @media (max-width: 768px) {
-  .sobre-mi-detalle-content {
+  .detalle-content {
     flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
     align-items: center; /* Alinea al centro verticalmente */
   }
 
-  .sobre-mi-detalle-imagen {
+  .detalle-imagen {
     order: -1; /* Coloca la imagen antes del texto en el flujo de la columna */
     margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
     margin-bottom: 20px; /* Añade espacio inferior para separar del texto */

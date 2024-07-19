@@ -2,3 +2,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: #f5f5f5; /* Cambia esto al color que prefieras */
+  margin: 0;
+  padding: 0;
+}
