@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 5rem;  
+  padding: 5rem 1rem; /* Ajustar el padding para responsividad */
 }
 
 .sobre-mi .container {
@@ -34,7 +34,8 @@
 }
 
 .sobre-mi p {
-  width: 75%;
+  width: 100%; /* Hacer el ancho completo en pantallas pequeñas */
+  max-width: 75%; /* Limitar el ancho máximo en pantallas grandes */
   color: #34240A;
   font-size: 1.5rem;
   text-align: center;
@@ -54,9 +55,34 @@
 
 .social-links {
   display: flex;
+  flex-wrap: wrap; /* Permitir el ajuste en varias filas en pantallas pequeñas */
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.btn-social {
+  display: inline-block; /* Cambiado a inline-block para asegurar alineación */
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s; /* Añadida transición para background-color y border-color */
+}
+
+.btn-social i {
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.btn-social:hover {
+  transform: translateY(-3px); /* Desplazamiento hacia arriba */
+}
+
+.btn-social:hover i {
+  transform: rotate(20deg); /* Rotación del ícono */
 }
 
 .btn-social.linkedin {
@@ -151,33 +177,9 @@
   border-color: #9dfe6d;
 }
 
-.btn-social {
-  display: inline-block; /* Cambiado a inline-block para asegurar alineación */
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 1.5rem;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s; /* Añadida transición para background-color y border-color */
-}
-
-.btn-social i {
-  margin-right: 0.5rem;
-  transition: transform 0.3s;
-}
-
-.btn-social:hover {
-  transform: translateY(-3px); /* Desplazamiento hacia arriba */
-}
-
-.btn-social:hover i {
-  transform: rotate(20deg); /* Rotación del ícono */
-}
-
 /* Estilo para la sección "Sobre Mí" detalle */
 .sobre-mi-detalle {
-  padding: 50px 0;
+  padding: 50px 1rem; /* Ajustar el padding para responsividad */
 }
 
 .sobre-mi-detalle .container {
@@ -224,9 +226,10 @@
 
 /* Estilo para la imagen a la derecha */
 .imagen-derecha {
-  width: 225px; /* Ajusta el ancho de la imagen según sea necesario */
-  border-radius: 20px; /* Añade bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25); /* Añade la sombra */
+  width: 100%; /* Ajustar el ancho al 100% */
+  max-width: 225px; /* Limitar el ancho máximo */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -239,5 +242,50 @@
     order: -1; /* Coloca la imagen antes del texto en el flujo de la columna */
     margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
     margin-bottom: 20px; /* Añade espacio inferior para separar del texto */
+  }
+
+  .sobre-mi h1 {
+    font-size: 2rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .sobre-mi p {
+    font-size: 1rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .sobre-mi {
+    padding: 3rem 1rem; /* Ajustar el padding para pantallas muy pequeñas */
+  }
+
+  .sobre-mi .container {
+    padding-top: 32px; /* Añadir padding superior para separarlo del header */
+  }
+
+  .sobre-mi h1 {
+    font-size: 1.75rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+  }
+
+  .sobre-mi p {
+    font-size: 0.875rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+  }
+
+  .detalle-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detalle-imagen {
+    order: -1;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .sobre-mi-detalle h2 {
+    font-size: 1.75rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+  }
+
+  .sobre-mi-detalle p {
+    font-size: 0.875rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
   }
 }
