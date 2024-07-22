@@ -25,12 +25,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
+  align-items: center;
+  gap: 1rem;
 }
 
 .skill {
   text-align: center;
-  flex: 1 0 21%; /* Adjust this value to control the number of items per row */
+  flex: 1 1 21%; /* Ajusta este valor para controlar el número de elementos por fila */
 }
 
 .skill img {
@@ -45,4 +46,19 @@
   font-family: 'Figtree', sans-serif;
   color: #333;
   margin-bottom: 10px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 576px) {
+  .habilidades h2 {
+    font-size: 1.75rem;
+  }
+
+  .skill img {
+    max-width: 80px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+  }
+
+  .skill p {
+    font-size: 1em; /* Ajusta el tamaño del texto para pantallas pequeñas */
+  }
 }
