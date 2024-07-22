@@ -24,7 +24,7 @@
 .job {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -94,6 +94,7 @@
   margin-right: 10px;
 }
 
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
   .job {
     flex-direction: column;
@@ -102,11 +103,62 @@
   }
 
   .company-logo {
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-bottom: 10px; /* Ajuste adicional para margen inferior */
+    margin-right: 0;
   }
 
   .job-details {
     text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .experiencia h2 {
+    font-size: 1.75rem;
+  }
+
+  .job {
+    padding: 15px;
+  }
+
+  .job h3 {
+    font-size: 1.25em;
+  }
+
+  .job h4 {
+    font-size: 1em;
+  }
+
+  .job span {
+    font-size: 0.9em;
+  }
+
+  .job p,
+  .job ul li {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 360px) {
+  .company-logo {
+    max-width: 80px; /* Ajusta el tamaño de la imagen para pantallas muy pequeñas */
+    max-height: 80px;
+  }
+
+  .job h3 {
+    font-size: 1.1em;
+  }
+
+  .job h4 {
+    font-size: 0.9em;
+  }
+
+  .job span {
+    font-size: 0.8em;
+  }
+
+  .job p,
+  .job ul li {
+    font-size: 0.8em;
   }
 }
