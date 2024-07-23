@@ -121,7 +121,8 @@
   display: none;
   position: absolute;
   bottom: 110%;
-  left: 72%;
+  left: 93%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 5px 10px;
@@ -269,6 +270,12 @@
 
   .sobre-mi p {
     font-size: 0.875rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+  }
+
+  .copy-confirmation {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    left: 90%;
   }
 
   .detalle-content {
