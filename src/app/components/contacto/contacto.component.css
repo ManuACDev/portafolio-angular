@@ -85,6 +85,7 @@
   background-color: #ff4c4c; /* Color característico de correo */
   border-color: #ff4c4c; /* Borde del mismo color */
   color: white; /* Texto blanco */
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
 }
 
 .btn-social.correo:hover {
@@ -139,8 +140,17 @@
   transform: rotate(20deg); /* Rotación del ícono */
 }
 
-@media (max-width: 342px) {
-  .btn-social.correo {
-    font-size: 0.85rem;
+@media (max-width: 576px) {
+  .contacto {
+    padding: 1rem;
+  }
+
+  .btn-social {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .copy-confirmation {
+    font-size: 0.8rem;
   }
 }
