@@ -3,11 +3,10 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #f5f5f5;
   padding: 2rem;  
 }
 
-.contacto .container {
+.container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,39 +15,40 @@
   margin: 0 auto;
 }
 
-.contacto .social-links {
+.social-links {
   display: flex;
+  flex-wrap: wrap; /* Permitir el ajuste en varias filas en pantallas pequeñas */
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-.contacto .btn-social.linkedin {
+.btn-social.linkedin {
   background-color: #0077b5; /* Color característico de LinkedIn */
   border-color: #0077b5; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.contacto .btn-social.linkedin:hover {
+.btn-social.linkedin:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #0077b5; /* Color característico para el texto e ícono */
   border-color: #0077b5;
 }
 
 /* Estilo para el botón de GitHub */
-.contacto .btn-social.github {
+.btn-social.github {
   background-color: #333; /* Color característico de GitHub */
   border-color: #333; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.contacto .btn-social.github:hover {
+.btn-social.github:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #333; /* Color característico para el texto e ícono */
   border-color: #333;
 }
 
-.contacto .correo-container {
+.correo-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -81,19 +81,19 @@
 }
 
 /* Estilo para el botón de correo */
-.contacto .btn-social.correo {
+.btn-social.correo {
   background-color: #ff4c4c; /* Color característico de correo */
   border-color: #ff4c4c; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.contacto .btn-social.correo:hover {
+.btn-social.correo:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #ff4c4c; /* Color característico para el texto e ícono */
   border-color: #ff4c4c;
 }
 
-.contacto .btn-social.copy-email {
+.btn-social.copy-email {
   background-color: #7d7d7d; /* Color característico para el botón de copiar correo */
   border-color: #7d7d7d;
   color: white;
@@ -103,19 +103,19 @@
 }
 
 /* Estilo para el botón de CV */
-.contacto .btn-social.cv {
+.btn-social.cv {
   background-color: #9dfe6d; /* Color característico para el CV */
   border-color: #9dfe6d; /* Borde del mismo color */
   color: white; /* Texto blanco */
 }
 
-.contacto .btn-social.cv:hover {
+.btn-social.cv:hover {
   background-color: white; /* Fondo blanco al pasar el ratón */
   color: #9dfe6d; /* Color característico para el texto e ícono */
   border-color: #9dfe6d;
 }
 
-.contacto .btn-social {
+.btn-social {
   display: inline-block; /* Cambiado a inline-block para asegurar alineación */
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
@@ -126,15 +126,21 @@
   transition: color 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s; /* Añadida transición para background-color y border-color */
 }
 
-.contacto .btn-social i {
+.btn-social i {
   margin-right: 0.5rem;
   transition: transform 0.3s;
 }
 
-.contacto .btn-social:hover {
+.btn-social:hover {
   transform: translateY(-3px); /* Desplazamiento hacia arriba */
 }
 
-.contacto .btn-social:hover i {
+.btn-social:hover i {
   transform: rotate(20deg); /* Rotación del ícono */
+}
+
+@media (max-width: 342px) {
+  .btn-social.correo {
+    font-size: 0.85rem;
+  }
 }
