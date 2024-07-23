@@ -1,6 +1,5 @@
 .proyectos {
   padding: 50px 0;
-  background-color: #f5f5f5;
 }
 
 .proyectos .container {
@@ -17,40 +16,51 @@
   line-height: 1;  
 }
 
+.proyectos h2 i {
+  margin-right: 10px;
+}
+
 .project {
   display: flex;
+  align-items: stretch;
   margin-bottom: 30px;
   background: transparent;
   padding: 15px;
 }
 
-.project > div {
-  margin-right: 20px; /* Espacio entre la imagen y el texto en pantallas grandes */
+.project-img {
+  flex: 0 0 40%;
+  overflow: hidden;
 }
 
-.project img {
-  max-width: 350px; /* Imagen ocupará todo el ancho disponible */
-  max-height: auto; /* Altura máxima de la imagen */
+.project-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 0.75rem;
 }
 
 .project-info {
-  flex: 1; /* Ocupa todo el espacio disponible */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .project-info h3 {
   font-size: 1.8em;
   font-family: 'Figtree', sans-serif;
   color: #333;
-  margin-top: 5px;
+  margin: 0;
 }
 
 .project-info p {
-  margin: 10px 0;
-  font-size: 1em;
+  font-size: 1rem;
   font-family: 'Figtree', sans-serif;
   color: #666;
   line-height: 1.6;
+  margin: 10px 0;
 }
 
 .project-links {
@@ -58,11 +68,13 @@
 }
 
 .project-links .btn {
+  display: inline-block;
   margin-right: 10px; /* Espacio entre los botones */
   padding: 10px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
   text-decoration: none;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -71,15 +83,15 @@
   color: #007bff;
 }
 
-.project-links .btn-demo {
-  border-color: #28a745;
-  color: #28a745;
-}
-
 .project-links .btn:hover {
   background-color: rgba(0, 123, 255, 0.1);
   border-color: rgba(0, 123, 255, 0.5);
   color: #007bff;
+}
+
+.project-links .btn-demo {
+  border-color: #28a745;
+  color: #28a745;
 }
 
 .project-links .btn-demo:hover {
@@ -90,13 +102,50 @@
 
 @media (max-width: 768px) {
   .project {
-    flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
-    align-items: center; /* Centra horizontalmente los elementos */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .project > div {
-    margin-right: 0; /* Elimina el margen entre la imagen y el texto en pantallas pequeñas */
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto en pantallas pequeñas */
-    text-align: justify; /* Centra la imagen en pantallas pequeñas */
+  .project-img {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .project-info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-links .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .proyectos h2 {
+    font-size: 1.75rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-info p {
+    font-size: 0.8rem;
+  }
+
+  .project-links .btn {
+    font-size: 0.8rem;
+    padding: 7px 10px;
   }
 }
