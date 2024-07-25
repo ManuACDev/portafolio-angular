@@ -1,5 +1,5 @@
 <section id="sobremi" class="sobre-mi">
-  <div class="container" *ngIf="contacto">
+  <div class="container" *ngIf="contacto$ | async as contacto">
     <img src="{{ contacto.avatar }}" alt="Avatar de Manuel" class="avatar">
     <h1>Hola, soy Manuel</h1>
     <p>Desarrollador de Software. <span class="highlight">Desarrollador Full Stack y Móvil.</span> <span class="localizacion"> De {{ contacto.localizacion.ciudad }}, {{ contacto.localizacion.comunidad }}.</span> Apasionado por la programación móvil.</p>
@@ -20,14 +20,14 @@
 
 <!-- Nueva sección "Sobre Mí" detalle -->
 <section class="sobre-mi-detalle">
-  <div class="container">
+  <div class="container" *ngIf="sobremi$ | async as sobremi">
     <h2><i class="fas fa-user"></i> Sobre mí</h2>
     <div class="detalle-content">
       <div class="detalle-texto">
-        <p>Soy un apasionado desarrollador de software con experiencia en diversas tecnologías. Me encanta crear soluciones innovadoras y eficientes. Mi objetivo es contribuir al éxito de proyectos desafiantes mientras sigo aprendiendo y creciendo en mi carrera profesional.</p>
+        <p>{{ sobremi.desc }}</p>
       </div>
       <div class="detalle-imagen">
-        <img src="{{ contacto.img }}" alt="Imagen profesional" class="imagen-derecha">
+        <img src="{{ sobremi.img }}" alt="Imagen profesional" class="imagen-derecha">
       </div>
     </div>
   </div>

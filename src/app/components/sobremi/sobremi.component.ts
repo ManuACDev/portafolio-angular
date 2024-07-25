@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../services/firestore.service';
 import { CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
+import { Contacto } from '../../models/contacto.model';
+import { Sobremi } from '../../models/sobremi.model';
 
 @Component({
   selector: 'app-sobremi',
@@ -11,28 +14,19 @@ import { CommonModule } from '@angular/common';
 })
 export class SobremiComponent implements OnInit {
 
-  contacto: any;
+  contacto$!: Observable<Contacto>;
+  sobremi$!: Observable<Sobremi>;
 
   constructor(private firestoreService: FirestoreService) { }
 
   ngOnInit() {
-    this.getContacto();
+    this.contacto$ = this.getUserInfo<Contacto>('Contacto');
+    this.sobremi$ = this.getUserInfo<Sobremi>('Sobremi');
   }
 
-  getContacto(): void {
-    
+  getUserInfo<T>(docId: string): Observable<T> {
     const collectionPath = 'Usuario';
-    const documentId = 'Contacto';
-
-    this.firestoreService.getDocumentById(collectionPath, documentId).subscribe(
-      data => {
-        this.contacto = data;
-        console.log(this.contacto);
-      },
-      error => {
-        console.error('Error fetching document: ', error);
-      }
-    );
+    return this.firestoreService.getDocumentById<T>(collectionPath, docId);
   }
 
   copyToClipboard(email: string) {
