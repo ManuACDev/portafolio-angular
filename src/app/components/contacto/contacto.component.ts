@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../../services/firestore.service';
 import { CommonModule } from '@angular/common';
+import { Contacto } from '../../models/contacto.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contacto',
@@ -11,28 +13,17 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactoComponent implements OnInit {
 
-  contacto: any;
+  contacto$!: Observable<Contacto>;
 
   constructor(private firestoreService: FirestoreService) { }
 
   ngOnInit() {
-    this.getContacto();
+    this.contacto$ = this.getUserInfo<Contacto>('Contacto');
   }
 
-  getContacto(): void {
-    
+  getUserInfo<T>(docId: string): Observable<T> {
     const collectionPath = 'Usuario';
-    const documentId = 'Contacto';
-
-    this.firestoreService.getDocumentById(collectionPath, documentId).subscribe(
-      data => {
-        this.contacto = data;
-        console.log(this.contacto);
-      },
-      error => {
-        console.error('Error fetching document: ', error);
-      }
-    );
+    return this.firestoreService.getDocumentById<T>(collectionPath, docId);
   }
 
   copyToClipboard(email: string) {
