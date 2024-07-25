@@ -1,12 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Proyecto {
-  nombre: string;
-  descripcion: string;
-  enlaceCodigo: string;
-  enlaceDemo: string;
-}
+import { Proyecto } from '../../models/proyecto.model';
+import { FirestoreService } from '../../services/firestore.service';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-proyectos',
@@ -15,21 +11,25 @@ interface Proyecto {
   templateUrl: './proyectos.component.html',
   styleUrl: './proyectos.component.css'
 })
-export class ProyectosComponent {
+export class ProyectosComponent implements OnInit {
 
-  listaProyectos: Proyecto[] = [
-    {
-      nombre: 'Newsletter Sign Up Form',
-      descripcion: 'En este proyecto construyo un formulario de registro a un newsletter, acompañado de un mensaje de agradecimiento.',
-      enlaceCodigo: 'url-al-codigo',
-      enlaceDemo: 'url-a-la-demo'
-    },
-    {
-      nombre: 'Shopping Cart',
-      descripcion: 'Shopping Cart tiene la funcionalidad básica de un carrito de compras. Añade items, eliminalos, cambia las tallas e incluso prueba algunos cupones de descuento.',
-      enlaceCodigo: 'url-al-codigo',
-      enlaceDemo: 'url-a-la-demo'
+  proyectos: Proyecto[] = [];
+
+  constructor(private firestoreService: FirestoreService) { }
+
+  ngOnInit() {
+    this.getProyectos();
+  }
+
+  async getProyectos(): Promise<void> {
+    try {
+      
+      const proyectos = await lastValueFrom(this.firestoreService.getCollection<Proyecto>('Proyectos'));
+      this.proyectos = proyectos.sort((a, b) => b.id - a.id);
+
+    } catch (error) {
+      console.error('Error al obtener los proyectos: ', error);
     }
-  ];
+  }
 
 }

@@ -67,7 +67,7 @@
   padding-top: 10px;
 }
 
-.project-links .btn {
+.btn {
   display: inline-block;
   margin-right: 10px; /* Espacio entre los botones */
   padding: 10px 15px;
@@ -78,26 +78,37 @@
   transition: all 0.3s ease;
 }
 
-.project-links .btn-codigo {
-  border-color: #007bff;
-  color: #007bff;
+.btn-codigo {
+  border-color: #24292e;
+  color: #24292e;
 }
 
-.project-links .btn:hover {
-  background-color: rgba(0, 123, 255, 0.1);
-  border-color: rgba(0, 123, 255, 0.5);
-  color: #007bff;
+.btn-codigo:hover {
+  background-color: rgba(36, 41, 46, 0.1);
+  border-color: rgba(36, 41, 46, 0.5);
+  color: #24292e;
 }
 
-.project-links .btn-demo {
+.btn-demo {
   border-color: #28a745;
   color: #28a745;
 }
 
-.project-links .btn-demo:hover {
+.btn-demo:hover {
   background-color: rgba(40, 167, 69, 0.1);
   border-color: rgba(40, 167, 69, 0.5);
   color: #28a745;
+}
+
+.btn-video {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-video:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.5);
+  color: #007bff;
 }
 
 @media (max-width: 768px) {

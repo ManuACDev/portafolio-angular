@@ -2,18 +2,25 @@
   <div class="container">
     <h2><i class="fas fa-code"></i> Proyectos</h2>
     
-    <div class="project">
+    <div *ngFor="let proyecto of proyectos" class="project">
 
       <div class="project-img">
-        <img src="./assets/PadelGroup.jpg" alt="PadelGroup App">
+        <img src="{{ proyecto.img }}" alt="{{ proyecto.nombre }}">
       </div>      
 
       <div class="project-info">
-        <h3>PadelGroup App</h3>
-        <p>Aplicación de gestión de pistas de pádel utilizando Ionic y Angular, con Firebase para datos en tiempo real. La app incluye un CRM, integración con Google Maps para localizar pistas, y Stripe para pagos seguros.</p>
+        <h3>{{ proyecto.nombre }}</h3>
+        <p>{{ proyecto.descripcion }}</p>
         <div class="project-links">
-          <!--<a href="#" class="btn btn-codigo"><i class="fab fa-github"></i> Código</a>-->
-          <a href="#" class="btn btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          <a *ngIf="proyecto.botonCodigo.activo" href="{{ proyecto.botonCodigo.url }}" class="btn btn-codigo" target="_blank">
+            <i class="fab fa-github"></i> Código
+          </a>
+          <a *ngIf="proyecto.botonDemo.activo" href="{{ proyecto.botonDemo.url }}" class="btn btn-demo" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+          <a *ngIf="proyecto.botonVideo.activo" href="{{ proyecto.botonVideo.video }}" class="btn btn-video" target="_blank">
+            <i class="fas fa-video"></i> Video
+          </a>
         </div>
       </div>
 
