@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FirestoreService } from '../../services/firestore.service';
+import { Experiencia } from '../../models/experiencia.model';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-experiencia',
@@ -10,18 +13,23 @@ import { CommonModule } from '@angular/common';
 })
 export class ExperienciaComponent {
 
-  experiencias = [
-    {
-      puesto: 'Desarrollador Front-End',
-      empresa: 'Tech Solutions',
-      fecha: 'Enero 2022 - Presente',
-      tareas: [
-        'Desarrollo y mantenimiento de interfaces de usuario',
-        'Colaboración en proyectos de software ágil',
-        'Implementación de pruebas unitarias y de integración'
-      ]
-    },
-    // Puedes añadir más experiencias laborales aquí
-  ];
+  experiencias: Experiencia[] = [];
+
+  constructor(private firestoreService: FirestoreService) { }
+
+  ngOnInit() {
+    this.getExperiencias();
+  }
+
+  async getExperiencias(): Promise<void> {
+    try {
+      
+      const experiencias = await lastValueFrom(this.firestoreService.getCollection<Experiencia>('Experiencias'));
+      this.experiencias = experiencias.sort((a, b) => b.id - a.id);
+
+    } catch (error) {
+      console.error('Error al obtener las experiencias: ', error);
+    }
+  }
 
 }

@@ -1,33 +1,18 @@
 <section id="experiencia" class="experiencia">
   <div class="container">
-    <h2><i class="fas fa-briefcase"></i> Experiencia</h2>
-    <div class="job">
-      <img src="./assets/indra.png" alt="Indra" class="company-logo">
+    <h2><i class="fas fa-briefcase"></i> Experiencias</h2>
+    <div class="job" *ngFor="let experiencia of experiencias">
+      <img src="{{ experiencia.img }}" alt="{{ experiencia.empresa }}" class="company-logo">
       <div class="job-details">
-        <h3>Ingeniero de Soporte</h3>
-        <h4>Indra, San Fernando de Henares, Madrid</h4>
-        <span>jul. 2022 - abr. 2024</span>
-        <p><strong>Proyecto Ferroviario para Irlanda:</strong></p>
-        <p>Participación en un proyecto ferroviario de gran envergadura para Irlanda, centrado en el desarrollo del CTC (Control de Tráfico Centralizado). Responsabilidades:</p>
+        <h3>{{ experiencia.puesto }}</h3>
+        <h4>{{ experiencia.empresa }}, {{ experiencia.ubicacion }}</h4>
+        <span>{{ experiencia.fechaInicio }} - {{ experiencia.fechaFin }}</span>
+        <p><strong>{{ experiencia.proyecto }}</strong></p>
+        <p>{{ experiencia.descripcion }}</p>
         <ul>
-          <li><i class="fas fa-check-circle"></i> Optimización de procesos de análisis y gestión de datos.</li>
-          <li><i class="fas fa-check-circle"></i> Desarrollo y administración de bases de datos en PostgreSQL, asegurando su integridad y rendimiento.</li>
-          <li><i class="fas fa-check-circle"></i> Diseño y programación de aplicaciones en Java y VBA para automatizar tareas de análisis y generación de ficheros de configuración.</li>
-          <li><i class="fas fa-check-circle"></i> Resolución de incidencias en colaboración con el resto de equipos.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="job">
-      <img src="./assets/indra.png" alt="Indra" class="company-logo">
-      <div class="job-details">
-        <h3>Ingeniero de Soporte</h3>
-        <h4>Indra, San Fernando de Henares, Madrid</h4>
-        <span>abr. 2022 - jun. 2022</span>
-        <p><strong>Responsabilidades:</strong></p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Implementación de estrategias de análisis y gestión de datos.</li>
-          <li><i class="fas fa-check-circle"></i> Configuración y mantenimiento de bases de datos en PostgreSQL, garantizando su disponibilidad y seguridad.</li>
-          <li><i class="fas fa-check-circle"></i> Resolución de incidencias en colaboración con equipos multidisciplinarios, mejorando la eficiencia de respuesta y solución.</li>
+          <li *ngFor="let responsabilidad of experiencia.responsabilidades">
+            <i class="fas fa-check-circle"></i> {{ responsabilidad }}
+          </li>
         </ul>
       </div>
     </div>
