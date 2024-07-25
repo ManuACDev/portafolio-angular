@@ -1,38 +1,21 @@
 <section id="formacion" class="educacion">
   <div class="container">
     <h2><i class="fas fa-graduation-cap"></i> Formación</h2>
-    
-    <div class="timeline-item">
-      <img src="./assets/campus-fp.webp" alt="CampusPF" class="company-logo">
+
+    <div *ngFor="let formacion of formaciones" class="timeline-item">
+      
+      <img src="{{ formacion.img }}" alt="{{ formacion.academia }}" class="company-logo">
+      
       <div class="timeline-content">
-        <h3>Desarrollo de Aplicaciones Web</h3>
-        <h4>Campus FP, Getafe</h4>
-        <span>sept. 2022 - jun. 2023</span>
+        <h3>{{ formacion.grado }}</h3>
+        <h4>{{ formacion.academia }}, {{ formacion.ubicacion }}</h4>
+        <span>{{ formacion.fechaInicio }} - {{ formacion.fechaFin }}</span>
         <p><strong>Aptitudes:</strong></p>
         <ul>
-          <li><i class="fas fa-check-circle"></i> Java, SQL, Git</li>
-          <li><i class="fas fa-check-circle"></i> Ionic Framework, Firebase</li>
-          <li><i class="fas fa-check-circle"></i> Angular, React.js, Vue.js</li>
-          <li><i class="fas fa-check-circle"></i> JavaScript, TypeScript</li>
+          <li *ngFor="let aptitud of formacion.aptitudes"><i class="fas fa-check-circle"></i> {{ aptitud }}</li>
         </ul>
       </div>
-    </div>
 
-    <div class="timeline-item">
-      <img src="./assets/campus-fp.webp" alt="CampusPF" class="company-logo">
-      <div class="timeline-content">
-        <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
-        <h4>Campus FP, Getafe</h4>
-        <span>oct. 2020 - jun. 2022</span>
-        <p><strong>Aptitudes:</strong></p>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Java, MySQL, PostgreSQL</li>
-          <li><i class="fas fa-check-circle"></i> Ionic Framework, Android, Firebase</li>
-          <li><i class="fas fa-check-circle"></i> Python, PHP</li>
-          <li><i class="fas fa-check-circle"></i> Angular, Git</li>
-        </ul>
-      </div>
     </div>
-
   </div>
 </section>
