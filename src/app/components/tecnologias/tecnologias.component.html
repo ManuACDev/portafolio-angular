@@ -2,33 +2,9 @@
   <div class="container">
     <h2><i class="fas fa-brain"></i> Habilidades</h2>
     <div class="skills">
-      <div class="skill">
-        <img src="./assets/ionic.webp" alt="Ionic">
-        <p>Ionic</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/typescript.png" alt="TypeScript">
-        <p>TypeScript</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/firebase.webp" alt="Firebase">
-        <p>Firebase</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/angular.webp" alt="Angular">
-        <p>Angular</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/android.webp" alt="Android">
-        <p>Android</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/java.png" alt="Java">
-        <p>Java</p>
-      </div>
-      <div class="skill">
-        <img src="./assets/git.webp" alt="Git">
-        <p>Git</p>
+      <div class="skill" *ngFor="let tecnologia of tecnologias">
+        <img src="{{ tecnologia.img }}" alt="{{ tecnologia.titulo }}">
+        <p>{{ tecnologia.titulo }}</p>
       </div>
     </div>
   </div>
