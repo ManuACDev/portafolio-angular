@@ -23,8 +23,10 @@ export class TecnologiasComponent implements OnInit {
 
   async getTecnologias() {
     try {
-      this.tecnologias = await lastValueFrom(this.firestoreService.getCollection<Tecnologia>('Tecnologias'));
-      console.log(this.tecnologias);
+
+      const tecnologias = await lastValueFrom(this.firestoreService.getCollection<Tecnologia>('Tecnologias'));
+      this.tecnologias = tecnologias.sort((a, b) => a.id - b.id);
+
     } catch (error) {
       console.error('Error al obtener las tecnologías: ', error);
     }
