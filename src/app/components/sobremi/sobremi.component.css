@@ -224,6 +224,7 @@
   color: #333;
   padding-right: 20px;
   margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+  text-align: justify;
 }
 
 /* Estilo para la imagen a la derecha */
@@ -252,6 +253,7 @@
 
   .sobre-mi p {
     font-size: 1rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+    text-align: justify;
   }
 }
 
