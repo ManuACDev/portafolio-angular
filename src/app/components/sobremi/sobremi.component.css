@@ -236,24 +236,27 @@
 }
 
 @media (max-width: 768px) {
-  .detalle-content {
-    flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
-    align-items: center; /* Alinea al centro verticalmente */
-  }
-
-  .detalle-imagen {
-    order: -1; /* Coloca la imagen antes del texto en el flujo de la columna */
-    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
-    margin-bottom: 20px; /* Añade espacio inferior para separar del texto */
-  }
-
   .sobre-mi h1 {
     font-size: 2rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
   }
 
   .sobre-mi p {
     font-size: 1rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
-    text-align: justify;
+  }
+
+  .detalle-content {
+    flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    align-items: center; /* Alinea al centro verticalmente */
+  }
+
+  .detalle-texto p {
+    padding-right: 0px;
+  }
+
+  .detalle-imagen {
+    order: -1; /* Coloca la imagen antes del texto en el flujo de la columna */
+    margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+    margin-bottom: 20px; /* Añade espacio inferior para separar del texto */
   }
 }
 
@@ -280,6 +283,10 @@
     left: 90%;
   }
 
+  .sobre-mi-detalle h2 {
+    font-size: 1.75rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+  }
+
   .detalle-content {
     flex-direction: column;
     align-items: center;
@@ -290,12 +297,8 @@
     margin-left: 0;
     margin-bottom: 20px;
   }
-
-  .sobre-mi-detalle h2 {
-    font-size: 1.75rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
-  }
-
-  .sobre-mi-detalle p {
+  
+  .detalle-texto p {
     font-size: 0.875rem; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
   }
 }
